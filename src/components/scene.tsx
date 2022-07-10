@@ -11,8 +11,8 @@ const Scene = () => {
   const robotRef = useRef<any>()
   useFrame(() => cameraRef.current.lookAt(robotRef.current.position))
   return (
-    <Suspense fallback={null}>
-      <PerspectiveCamera ref={cameraRef} makeDefault position={[-180, 50, 0]} />
+    <Suspense fallback={<div>loading</div>}>
+      <PerspectiveCamera ref={cameraRef} makeDefault position={[-250, 50, 0]} />
       <hemisphereLight intensity={0.35} />
       <spotLight
         position={[20, 30, 10]}
@@ -24,7 +24,7 @@ const Scene = () => {
         shadow-mapSize-width={256}
         shadow-mapSize-height={256}
       />
-      <color attach="background" args={['#41A8C6']} />
+      <color attach="background" args={['#B6EAF3']} />
       <Physics iterations={80} gravity={[0, -40, 0]}>
         <Robot ref={robotRef} />
 
@@ -32,7 +32,7 @@ const Scene = () => {
         <Obstacles />
 
         {/* đất liền  */}
-        <Plane args={[120, 120]} position={[-20, -5, 0]} rotation={[-Math.PI / 2, 0, 0]} />
+        <Plane args={[200, 300]} bgColor="#FCEEBD" position={[-20, -5, 0]} rotation={[-Math.PI / 2, 0, 0]} />
       </Physics>
     </Suspense>
   )

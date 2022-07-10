@@ -6,7 +6,7 @@ import BoxShape from "./box-shape"
 
 const ConstraintPart = forwardRef(
   ({ config = {}, enableMotor, motorSpeed, color, children, name, pivot = [0, 0, 0], parentPivot = [0, 0, 0], ...props }, ref) => {
-    const parent = useContext(context)
+    const parent: any = useContext(context)
     const normParentPivot = parent ? normalizeSize(parent[1].args) : () => undefined
     const normPivot = props.args ? normalizeSize(props.args) : () => undefined
 
