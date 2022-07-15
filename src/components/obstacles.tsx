@@ -1,9 +1,10 @@
+import BoxShape from "./box-shape"
 import ConstraintPart from "./constraint-part"
 
 const Obstacles = () => {
   return (
     <>
-      <ConstraintPart
+      {/* <ConstraintPart
         // collisionFilterGroup={GROUP_GROUND}
         // collisionFilterMask={GROUP_BODY | GROUP_GROUND}
         // mass={4}
@@ -11,9 +12,13 @@ const Obstacles = () => {
         position={[-45, -4, 0]}
         // rotation={[0, Math.PI / -4, 0]}
         color={'#ffb385'}
-      />
+      /> */}
 
-      <ConstraintPart
+      <BoxShape args={[3,3,3]} position={[0, 0, 0]}/>
+      <BoxShape args={[3,3,3]} position={[6, 6, 6]}/>
+
+
+      {/* <ConstraintPart
         // collisionFilterGroup={GROUP_GROUND}
         // collisionFilterMask={GROUP_BODY | GROUP_GROUND}
         // mass={4}
@@ -21,7 +26,7 @@ const Obstacles = () => {
         position={[-90, -4, 0]}
         // rotation={[0, Math.PI / -4, 0]}
         color={'#ffb385'}
-      />
+      /> */}
       {/* <ConstraintPart
         collisionFilterGroup={GROUP_GROUND}
         collisionFilterMask={GROUP_BODY | GROUP_GROUND}
@@ -39,7 +44,7 @@ const Obstacles = () => {
         position={[-45, 0, -5]}
         rotation={[0, Math.PI / 3, 0]}
         color={'#c58e6e'} */}
-      />
+      {/* /> */}
     </>
   )
 }

@@ -2,6 +2,7 @@ import { Physics } from "@react-three/cannon"
 import { PerspectiveCamera } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
 import { Suspense, useRef } from "react"
+import BoxShape from "./box-shape"
 import Obstacles from "./obstacles"
 import Plane from "./plane"
 import Robot from "./robot"
@@ -30,6 +31,7 @@ const Scene = () => {
 
         {/* mảnh đất nhỏ*/}
         <Obstacles />
+
 
         {/* đất liền  */}
         <Plane args={[200, 300]} bgColor="#FCEEBD" position={[-20, -5, 0]} rotation={[-Math.PI / 2, 0, 0]} />
