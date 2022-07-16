@@ -11,15 +11,15 @@ interface PlaneProps {
 
 const Plane: React.FC<PlaneProps> = (props) => {
   const { args, bgColor, ...planeProps } = props
-  const [ref] = usePlane(() => ({ type: 'Static', collisionFilterGroup: GROUP_GROUND, ...planeProps }))
+  const [ref]: any = usePlane(() => ({ type: 'Static', collisionFilterGroup: GROUP_GROUND, ...planeProps }))
   return (
     <group ref={ref}>
       <mesh>
-        <planeGeometry args={args} />
+        <circleGeometry args={args} />
         <meshBasicMaterial color={bgColor} />
       </mesh>
       <mesh receiveShadow>
-        <planeGeometry args={args} />
+        <circleGeometry args={args} />
         <shadowMaterial color="lightsalmon" />
       </mesh>
     </group>

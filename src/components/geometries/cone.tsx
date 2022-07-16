@@ -8,14 +8,14 @@ interface BoxShapeProps {
   position?: any
 }
 
-const BoxShape: React.FC<BoxShapeProps> = ({ children, transparent = false, opacity = 1, color = 'white', args = [1, 1, 1], ...props }) => {
+const ConeGeometry: React.FC<BoxShapeProps> = ({ children, transparent = false, opacity = 1, color = 'white', args = [1, 1, 1], ...props }) => {
   return (
-    <mesh receiveShadow castShadow {...props}>
-      <boxGeometry args={args} />
+    <mesh receiveShadow castShadow  {...props}>
+      <coneGeometry args={args} />
       <meshStandardMaterial color={color} transparent={transparent} opacity={opacity} />
       {children}
     </mesh>
   )
 }
 
-export default BoxShape
+export default ConeGeometry

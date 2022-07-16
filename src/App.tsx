@@ -4,7 +4,7 @@ import { createContext } from 'react'
 import Scene from './components/scene'
 import './index.css'
 
-export const context = createContext()
+export const context = createContext(null)
 
 
 export default () => {

@@ -9,7 +9,6 @@ body,
 }
 
 #canvas-root {
-  background-image: url("./assets/bg.gif");
   background-size: cover;
   width: 100%;
   height: 100%;
