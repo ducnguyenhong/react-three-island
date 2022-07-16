@@ -3,7 +3,7 @@ import { forwardRef } from "react"
 interface BoxShapeProps {
   transparent?: boolean
   opacity?: number
-  color: string
+  color?: string
   args?: any
   children?: any
 }
