@@ -39,7 +39,7 @@ const Obstacles = () => {
         position={[-45, 0, -5]}
         rotation={[0, Math.PI / 3, 0]}
         color={'#c58e6e'} */}
-      />
+      {/* /> */}
     </>
   )
 }

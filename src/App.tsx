@@ -10,7 +10,7 @@ export const context = createContext()
 export default () => {
   return (
     <div id="main">
-      <Canvas shadows gl={{ alpha: false }}>
+      <Canvas id="canvas-root" shadows gl={{ alpha: false }}>
         <OrbitControls />
         <Scene />
       </Canvas>
