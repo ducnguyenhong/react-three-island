@@ -11,16 +11,7 @@ const Scene = () => {
     <Suspense fallback={<div>loading</div>}>
       <PerspectiveCamera ref={cameraRef} makeDefault position={[-250, 50, 0]} />
       <hemisphereLight intensity={0.35} />
-      <spotLight
-        position={[20, 30, 10]}
-        angle={Math.PI / 5}
-        penumbra={1}
-        intensity={1}
-        distance={180}
-        castShadow
-        shadow-mapSize-width={256}
-        shadow-mapSize-height={256}
-      />
+      <directionalLight args={['white', 0.5]} position={[100, 100, 100]} />
       <color attach="background" args={['#B6EAF3']} />
       <Physics iterations={80} gravity={[0, -40, 0]}>
         {/* mảnh đất nhỏ*/}

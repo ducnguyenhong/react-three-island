@@ -1,3 +1,4 @@
+import { forwardRef } from "react"
 
 interface BoxShapeProps {
   transparent?: boolean
@@ -8,14 +9,14 @@ interface BoxShapeProps {
   position?: any
 }
 
-const ConeGeometry: React.FC<BoxShapeProps> = ({ children, transparent = false, opacity = 1, color = 'white', args = [1, 1, 1], ...props }) => {
+const ConeGeometry = forwardRef(({ children, transparent = false, opacity = 1, color = 'white', args = [1, 1, 1], ...props }: BoxShapeProps, ref: any) => {
   return (
-    <mesh receiveShadow castShadow  {...props}>
+    <mesh receiveShadow castShadow ref={ref} {...props}>
       <coneGeometry args={args} />
       <meshStandardMaterial color={color} transparent={transparent} opacity={opacity} />
       {children}
     </mesh>
   )
-}
+})
 
 export default ConeGeometry

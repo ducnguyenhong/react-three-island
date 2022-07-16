@@ -10,9 +10,9 @@ interface CoconutTreeProps {
 const CoconutTree: React.FC<CoconutTreeProps> = (props) => {
   const { args } = props
   return (
-    <>
-      <ConeGeometry args={[1.5, 10, 10]} position={[90, 0, 0]} color="gray" />
-      <CylinderGeometry args={[1.2, 1.2, 8, 10]} position={[90, 0, 0]} color="gray" />
+    <mesh>
+      <ConeGeometry args={[1.5, 10, 10]} position={[90, 0, 0]} color="#A6674C" />
+      <CylinderGeometry args={[1.2, 1.2, 8, 10]} position={[90, 0, 0]} color="#A6674C" />
 
       <DodecahedronGeometry args={[2.5, 0]} position={[90, 3, 0]} color="#70db70" />
       <DodecahedronGeometry args={[2.5, 0]} position={[86, 3, 0]} color="#70db70" />
@@ -27,7 +27,7 @@ const CoconutTree: React.FC<CoconutTreeProps> = (props) => {
 
       <DodecahedronGeometry args={[2.5, 0]} position={[90, 8, 0]} color="#70db70" />
 
-    </>
+    </mesh>
   )
 }
 
