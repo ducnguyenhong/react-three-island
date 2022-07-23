@@ -9,7 +9,7 @@ const Scene = () => {
 
   return (
     <Suspense fallback={<div>loading</div>}>
-      <PerspectiveCamera ref={cameraRef} makeDefault position={[-250, 50, 0]} />
+      <PerspectiveCamera ref={cameraRef} makeDefault position={[-250, 20, 0]} />
       <hemisphereLight intensity={0.35} />
       <directionalLight args={['white', 0.5]} position={[100, 100, 100]} />
       <color attach="background" args={['#B6EAF3']} />
@@ -19,7 +19,7 @@ const Scene = () => {
 
 
         {/* đất liền  */}
-        <Plane args={[150, 40]} bgColor="#FCEEBD" position={[-20, -5, 0]} rotation={[-Math.PI / 2, 0, 0]} />
+        <Plane args={[145, 40]} bgColor="#FCEEBD" position={[0, -5, 0]} rotation={[-Math.PI / 2, 0, 0]} />
       </Physics>
     </Suspense>
   )
