@@ -24,8 +24,13 @@ const Obstacles = () => {
 
       <ExtrudeGeometry position={[40, -3.5, 40]} />
 
-      <ConeGeometry args={[40, 60, 10]} position={[70, 25, -60]} color="#A38166" />
+      {/* núi */}
+      <ConeGeometry args={[30, 60, 13]} position={[90, 25, -70]} color="#A38166" />
+      <ConeGeometry args={[6, 12, 13]} position={[90, 49.2, -70]} color="#ebeef9" />
 
+      <ConeGeometry args={[30, 85, 10]} position={[110, 37, -30]} color="#A38166" />
+
+      {/* đáy */}
       <ConeGeometry ref={bottomConeRef} args={[145, 50, 40]} position={[0, -30.1, 0]} color="#FCEEBD" />
     </>
   )
