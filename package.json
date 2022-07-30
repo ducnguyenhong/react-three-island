@@ -1,6 +1,6 @@
 {
-  "name": "island",
-  "homepage": "https://autoclickvn.github.io/react-three-island/",
+  "homepage": "https://autoclickvn.github.io",
+  "name": "react-three-island",
   "private": true,
   "version": "0.0.1",
   "scripts": {

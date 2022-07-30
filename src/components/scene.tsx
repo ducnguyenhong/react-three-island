@@ -11,7 +11,7 @@ const Scene = () => {
     <Suspense fallback={<div>loading</div>}>
       <PerspectiveCamera ref={cameraRef} makeDefault position={[-250, 20, 0]} />
       <hemisphereLight intensity={0.35} />
-      <directionalLight args={['white', 0.5]} position={[100, 100, 100]} />
+      <directionalLight args={['white', 0.5]} position={[150, 200, 200]} />
       <color attach="background" args={['#B6EAF3']} />
       <Physics iterations={80} gravity={[0, -40, 0]}>
         {/* mảnh đất nhỏ*/}

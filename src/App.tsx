@@ -1,4 +1,4 @@
-import { OrbitControls } from '@react-three/drei'
+import { MapControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { createContext } from 'react'
 import Scene from './components/scene'
@@ -11,7 +11,7 @@ export default () => {
   return (
     <div id="main">
       <Canvas id="canvas-root" shadows gl={{ alpha: false }}>
-        <OrbitControls />
+        <MapControls />
         <Scene />
       </Canvas>
     </div>

@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react"
 import BoxShape from "./box-shape"
 import ConeGeometry from "./geometries/cone"
 import ExtrudeGeometry from "./geometries/extrude"
+import CedrusTree from "./objects/cedrus-tree"
 import Cloud from "./objects/cloud"
 import CoconutTree from "./objects/coconut-tree"
 
@@ -19,6 +20,12 @@ const Obstacles = () => {
       <BoxShape args={[3, 3, 3]} position={[6, 6, 6]} />
 
       <CoconutTree />
+
+      <CedrusTree position={[-100, 0, -20]} />
+      <CedrusTree position={[-100, 0, -10]} />
+      <CedrusTree position={[-100, 0, 0]} />
+      <CedrusTree position={[-100, 0, 10]} />
+      <CedrusTree position={[-100, 0, 20]} />
 
       <Cloud />
 
