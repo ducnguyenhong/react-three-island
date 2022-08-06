@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-interface BoxShapeProps {
+interface ExtrudeProps {
   transparent?: boolean
   opacity?: number
   color?: string
@@ -9,7 +9,7 @@ interface BoxShapeProps {
   position?: any
 }
 
-const ExtrudeGeometry: React.FC<BoxShapeProps> = ({ children, transparent = false, opacity = 1, color = 'white', args = [1, 1, 1], ...props }) => {
+const ExtrudeGeometry: React.FC<ExtrudeProps> = ({ children, transparent = false, opacity = 1, color = 'white', args = [1, 1, 1], ...props }) => {
 
   const length = 3, width = 50;
   const shape = new THREE.Shape();

@@ -1,5 +1,5 @@
 
-interface BoxShapeProps {
+interface CylinderProps {
   transparent?: boolean
   opacity?: number
   color?: string
@@ -8,7 +8,7 @@ interface BoxShapeProps {
   position?: any
 }
 
-const CylinderGeometry: React.FC<BoxShapeProps> = ({ children, transparent = false, opacity = 1, color = 'white', args = [1, 1, 1], ...props }) => {
+const CylinderGeometry: React.FC<CylinderProps> = ({ children, transparent = false, opacity = 1, color = 'white', args = [1, 1, 1], ...props }) => {
   return (
     <mesh receiveShadow castShadow {...props}>
       <cylinderGeometry args={args} />

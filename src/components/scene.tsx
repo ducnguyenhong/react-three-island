@@ -8,7 +8,7 @@ const Scene = () => {
 
   return (
     <Suspense fallback={<div>loading</div>}>
-      <PerspectiveCamera ref={cameraRef} makeDefault position={[-250, 24, 0]} />
+      <PerspectiveCamera ref={cameraRef} makeDefault position={[-250, 27, 0]} />
       <hemisphereLight intensity={0.35} />
       <directionalLight args={['white', 0.5]} position={[-100, 250, 150]} />
       <color attach="background" args={['#B6EAF3']} />
